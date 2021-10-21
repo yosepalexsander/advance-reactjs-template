@@ -1,5 +1,5 @@
 // import css modules
-
+import style from "./Form.module.css";
 const styles = {
   form: {
     margin: "16px 20% 0",
@@ -24,7 +24,6 @@ const styles = {
   },
 };
 
-
 function Form() {
   return (
     <div>
@@ -33,16 +32,17 @@ function Form() {
           <label htmlFor="username" style={styles.formLabel}>
             Username
           </label>
-          <input
-            id="username"
-            placeholder="Input username"
-            style={styles.formInput}
-          />
+          <input id="username" placeholder="Input username" style={styles.formInput} />
         </div>
-        {/* code here */}
+        <div className={style.formGroup}>
+          <label htmlFor="email" className={style.formLabel}>
+            Email
+          </label>
+          <input id="email" className={style.formInput} placeholder="Input your email" />
+        </div>
       </form>
     </div>
-  )
+  );
 }
 
-export default Form
+export default Form;
